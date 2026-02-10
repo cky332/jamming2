@@ -1,0 +1,2245 @@
+[
+    {
+        "db_id": "eicu",
+        "question": "what is warfarin sodium 2.5 mg po tabs's way of ingesting it?",
+        "template": "what is the intake method of warfarin sodium 2.5 mg po tabs?",
+        "query": "select distinct medication.routeadmin from medication where medication.drugname = 'warfarin sodium 2.5 mg po tabs'",
+        "value": {
+            "drug_name": "warfarin sodium 2.5 mg po tabs"
+        },
+        "q_tag": "what is the intake method of {drug_name}?",
+        "t_tag": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what is the intake method of {drug_name}?",
+        "department": "['nursing']",
+        "importance": "medium",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "e99739f1cdf689b4761876f3",
+        "answer": [
+            "oral",
+            "po"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "what is the method for ingestion of ns 1,000 ml?",
+        "template": "what is the intake method of ns 1,000 ml?",
+        "query": "select distinct medication.routeadmin from medication where medication.drugname = 'ns 1,000 ml'",
+        "value": {
+            "drug_name": "ns 1,000 ml"
+        },
+        "q_tag": "what is the intake method of {drug_name}?",
+        "t_tag": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what is the intake method of {drug_name}?",
+        "department": "['nursing']",
+        "importance": "medium",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "b7d73722adc2200e5aa8bec4",
+        "answer": [
+            "iv"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how is atorvastatin calcium 80 mg po tabs taken?",
+        "template": "what is the intake method of atorvastatin calcium 80 mg po tabs?",
+        "query": "select distinct medication.routeadmin from medication where medication.drugname = 'atorvastatin calcium 80 mg po tabs'",
+        "value": {
+            "drug_name": "atorvastatin calcium 80 mg po tabs"
+        },
+        "q_tag": "what is the intake method of {drug_name}?",
+        "t_tag": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what is the intake method of {drug_name}?",
+        "department": "['nursing']",
+        "importance": "medium",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "78f03cb7fce61762ad5027ba",
+        "answer": [
+            "po",
+            "per ng tube"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "what is metoprolol succinate er 50 mg po tb24's intake method?",
+        "template": "what is the intake method of metoprolol succinate er 50 mg po tb24?",
+        "query": "select distinct medication.routeadmin from medication where medication.drugname = 'metoprolol succinate er 50 mg po tb24'",
+        "value": {
+            "drug_name": "metoprolol succinate er 50 mg po tb24"
+        },
+        "q_tag": "what is the intake method of {drug_name}?",
+        "t_tag": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what is the intake method of {drug_name}?",
+        "department": "['nursing']",
+        "importance": "medium",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "c8d23fb0310536e59568dd32",
+        "answer": [
+            "po",
+            "oral"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "tell me the cost of a prescription drug called lorazepam 0.5 mg tab?",
+        "template": "what is the cost of a drug named lorazepam 0.5 mg tab?",
+        "query": "select distinct cost.cost from cost where cost.eventtype = 'medication' and cost.eventid in ( select medication.medicationid from medication where medication.drugname = 'lorazepam 0.5 mg tab' )",
+        "value": {
+            "drug_name": "lorazepam 0.5 mg tab"
+        },
+        "q_tag": "what is the cost of a drug named {drug_name}?",
+        "t_tag": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what is the cost of a drug named {drug_name}?",
+        "department": "['nursing']",
+        "importance": "high",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "a56329b35d3558baa81f23ed",
+        "answer": [
+            "10.69"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "whats the price for bumetanide 0.25 mg/1ml 4ml sdv inj.",
+        "template": "what is the cost of a drug named bumetanide 0.25 mg/1ml 4ml sdv inj?",
+        "query": "select distinct cost.cost from cost where cost.eventtype = 'medication' and cost.eventid in ( select medication.medicationid from medication where medication.drugname = 'bumetanide 0.25 mg/1ml 4ml sdv inj' )",
+        "value": {
+            "drug_name": "bumetanide 0.25 mg/1ml 4ml sdv inj"
+        },
+        "q_tag": "what is the cost of a drug named {drug_name}?",
+        "t_tag": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what is the cost of a drug named {drug_name}?",
+        "department": "['nursing']",
+        "importance": "high",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "f96a49afb0b61b550cab7350",
+        "answer": [
+            "8.63"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "what is the cost of epinephrine?",
+        "template": "what is the cost of a drug named epinephrine?",
+        "query": "select distinct cost.cost from cost where cost.eventtype = 'medication' and cost.eventid in ( select medication.medicationid from medication where medication.drugname = 'epinephrine' )",
+        "value": {
+            "drug_name": "epinephrine"
+        },
+        "q_tag": "what is the cost of a drug named {drug_name}?",
+        "t_tag": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what is the cost of a drug named {drug_name}?",
+        "department": "['nursing']",
+        "importance": "high",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "8322325ec55662b50994b675",
+        "answer": [
+            "8.73"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how much is enoxaparin 40 mg/0.4 ml syr?",
+        "template": "what is the cost of a drug named enoxaparin 40 mg/0.4 ml syr?",
+        "query": "select distinct cost.cost from cost where cost.eventtype = 'medication' and cost.eventid in ( select medication.medicationid from medication where medication.drugname = 'enoxaparin 40 mg/0.4 ml syr' )",
+        "value": {
+            "drug_name": "enoxaparin 40 mg/0.4 ml syr"
+        },
+        "q_tag": "what is the cost of a drug named {drug_name}?",
+        "t_tag": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what is the cost of a drug named {drug_name}?",
+        "department": "['nursing']",
+        "importance": "high",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "305f3cd28fcc2f8695889edc",
+        "answer": [
+            "11.37"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how many days have elapsed since patient 022-78423 had his first propofol prescription during the current hospital encounter?",
+        "template": "how many days have passed since the first time patient 022-78423 was prescribed propofol on the current hospital visit?",
+        "query": "select 1 * ( strftime('%j',current_time) - strftime('%j',medication.drugstarttime) ) from medication where medication.patientunitstayid in ( select patient.patientunitstayid from patient where patient.patienthealthsystemstayid in ( select patient.patienthealthsystemstayid from patient where patient.uniquepid = '022-78423' ) and patient.hospitaldischargetime is null ) and medication.drugname = 'propofol' order by medication.drugstarttime asc limit 1",
+        "value": {
+            "patient_id": "022-78423",
+            "drug_name": "propofol"
+        },
+        "q_tag": "how many [unit_count] have passed since the [time_filter_exact1] time patient {patient_id} was prescribed {drug_name} on the current hospital visit?",
+        "t_tag": [
+            "rel-hosp-cur",
+            "",
+            "",
+            "exact-first",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "days"
+        ],
+        "tag": "how many [unit_count:days] have passed since the [time_filter_exact1:exact-first] time patient {patient_id} was prescribed {drug_name} on the current hospital visit?",
+        "department": "['physician', 'nursing']",
+        "importance": "n/a",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "edd5170108985d5ba7bb865b",
+        "answer": [
+            "-363"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how many days has it been since patient 012-20116 was prescribed sodium chloride 0.9 % bolus the last time during their current hospital encounter?",
+        "template": "how many days have passed since the last time patient 012-20116 was prescribed sodium chloride 0.9 % bolus on the current hospital visit?",
+        "query": "select 1 * ( strftime('%j',current_time) - strftime('%j',medication.drugstarttime) ) from medication where medication.patientunitstayid in ( select patient.patientunitstayid from patient where patient.patienthealthsystemstayid in ( select patient.patienthealthsystemstayid from patient where patient.uniquepid = '012-20116' ) and patient.hospitaldischargetime is null ) and medication.drugname = 'sodium chloride 0.9 % bolus' order by medication.drugstarttime desc limit 1",
+        "value": {
+            "patient_id": "012-20116",
+            "drug_name": "sodium chloride 0.9 % bolus"
+        },
+        "q_tag": "how many [unit_count] have passed since the [time_filter_exact1] time patient {patient_id} was prescribed {drug_name} on the current hospital visit?",
+        "t_tag": [
+            "rel-hosp-cur",
+            "",
+            "",
+            "exact-last",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "days"
+        ],
+        "tag": "how many [unit_count:days] have passed since the [time_filter_exact1:exact-last] time patient {patient_id} was prescribed {drug_name} on the current hospital visit?",
+        "department": "['physician', 'nursing']",
+        "importance": "n/a",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "9e5c2953a137c3121d5eb092",
+        "answer": [
+            "-362"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how many hours has it been since patient 002-34744's last lopressor prescription in this hospital encounter?",
+        "template": "how many hours have passed since the last time patient 002-34744 was prescribed lopressor on the current hospital visit?",
+        "query": "select 24 * ( strftime('%j',current_time) - strftime('%j',medication.drugstarttime) ) from medication where medication.patientunitstayid in ( select patient.patientunitstayid from patient where patient.patienthealthsystemstayid in ( select patient.patienthealthsystemstayid from patient where patient.uniquepid = '002-34744' ) and patient.hospitaldischargetime is null ) and medication.drugname = 'lopressor' order by medication.drugstarttime desc limit 1",
+        "value": {
+            "patient_id": "002-34744",
+            "drug_name": "lopressor"
+        },
+        "q_tag": "how many [unit_count] have passed since the [time_filter_exact1] time patient {patient_id} was prescribed {drug_name} on the current hospital visit?",
+        "t_tag": [
+            "rel-hosp-cur",
+            "",
+            "",
+            "exact-last",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "hours"
+        ],
+        "tag": "how many [unit_count:hours] have passed since the [time_filter_exact1:exact-last] time patient {patient_id} was prescribed {drug_name} on the current hospital visit?",
+        "department": "['physician', 'nursing']",
+        "importance": "n/a",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "1776bd3fd8cd87807dd8a585",
+        "answer": [
+            "-8712"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how many days have elapsed since patient 022-6959's last benadryl prescription in their current hospital encounter?",
+        "template": "how many days have passed since the last time patient 022-6959 was prescribed benadryl on the current hospital visit?",
+        "query": "select 1 * ( strftime('%j',current_time) - strftime('%j',medication.drugstarttime) ) from medication where medication.patientunitstayid in ( select patient.patientunitstayid from patient where patient.patienthealthsystemstayid in ( select patient.patienthealthsystemstayid from patient where patient.uniquepid = '022-6959' ) and patient.hospitaldischargetime is null ) and medication.drugname = 'benadryl' order by medication.drugstarttime desc limit 1",
+        "value": {
+            "patient_id": "022-6959",
+            "drug_name": "benadryl"
+        },
+        "q_tag": "how many [unit_count] have passed since the [time_filter_exact1] time patient {patient_id} was prescribed {drug_name} on the current hospital visit?",
+        "t_tag": [
+            "rel-hosp-cur",
+            "",
+            "",
+            "exact-last",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "days"
+        ],
+        "tag": "how many [unit_count:days] have passed since the [time_filter_exact1:exact-last] time patient {patient_id} was prescribed {drug_name} on the current hospital visit?",
+        "department": "['physician', 'nursing']",
+        "importance": "n/a",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "eb60de565942f5b7cb76ec80",
+        "answer": [
+            "-360"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how many days have passed since patient 004-79017 was first prescribed furosemide during the current hospital encounter?",
+        "template": "how many days have passed since the first time patient 004-79017 was prescribed furosemide on the current hospital visit?",
+        "query": "select 1 * ( strftime('%j',current_time) - strftime('%j',medication.drugstarttime) ) from medication where medication.patientunitstayid in ( select patient.patientunitstayid from patient where patient.patienthealthsystemstayid in ( select patient.patienthealthsystemstayid from patient where patient.uniquepid = '004-79017' ) and patient.hospitaldischargetime is null ) and medication.drugname = 'furosemide' order by medication.drugstarttime asc limit 1",
+        "value": {
+            "patient_id": "004-79017",
+            "drug_name": "furosemide"
+        },
+        "q_tag": "how many [unit_count] have passed since the [time_filter_exact1] time patient {patient_id} was prescribed {drug_name} on the current hospital visit?",
+        "t_tag": [
+            "rel-hosp-cur",
+            "",
+            "",
+            "exact-first",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "days"
+        ],
+        "tag": "how many [unit_count:days] have passed since the [time_filter_exact1:exact-first] time patient {patient_id} was prescribed {drug_name} on the current hospital visit?",
+        "department": "['physician', 'nursing']",
+        "importance": "n/a",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "96e787c8c673a610d79afe5b",
+        "answer": [
+            "-364"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "when was patient 015-96048 last prescribed for tylenol on their last hospital visit?",
+        "template": "when was the last time that patient 015-96048 was prescribed tylenol on the last hospital visit?",
+        "query": "select medication.drugstarttime from medication where medication.patientunitstayid in ( select patient.patientunitstayid from patient where patient.patienthealthsystemstayid in ( select patient.patienthealthsystemstayid from patient where patient.uniquepid = '015-96048' and patient.hospitaldischargetime is not null order by patient.hospitaladmittime desc limit 1 ) ) and medication.drugname = 'tylenol' order by medication.drugstarttime desc limit 1",
+        "value": {
+            "patient_id": "015-96048",
+            "drug_name": "tylenol"
+        },
+        "q_tag": "when was the [time_filter_exact1] time that patient {patient_id} was prescribed {drug_name} [time_filter_global1]?",
+        "t_tag": [
+            "rel-hosp-last",
+            "",
+            "",
+            "exact-last",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "when was the [time_filter_exact1:exact-last] time that patient {patient_id} was prescribed {drug_name} [time_filter_global1:rel-hosp-last]?",
+        "department": "['physician', 'nursing']",
+        "importance": "high",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "81f1ce7f6103afce15d53077",
+        "answer": [
+            "2105-08-15 04:45:00"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "when did patient 005-12192 first receive a prescription for calcium gluconate 100 mg/ml (10 %) iv : 10 ml?",
+        "template": "when was the first time that patient 005-12192 was prescribed calcium gluconate 100 mg/ml (10 %) iv : 10 ml?",
+        "query": "select medication.drugstarttime from medication where medication.patientunitstayid in ( select patient.patientunitstayid from patient where patient.patienthealthsystemstayid in ( select patient.patienthealthsystemstayid from patient where patient.uniquepid = '005-12192' ) ) and medication.drugname = 'calcium gluconate 100 mg/ml (10 %) iv : 10 ml' order by medication.drugstarttime asc limit 1",
+        "value": {
+            "drug_name": "calcium gluconate 100 mg/ml (10 %) iv : 10 ml",
+            "patient_id": "005-12192"
+        },
+        "q_tag": "when was the [time_filter_exact1] time that patient {patient_id} was prescribed {drug_name} [time_filter_global1]?",
+        "t_tag": [
+            "",
+            "",
+            "",
+            "exact-first",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "when was the [time_filter_exact1:exact-first] time that patient {patient_id} was prescribed {drug_name} [time_filter_global1:null]?",
+        "department": "['physician', 'nursing']",
+        "importance": "high",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "66e61da13497c065909528ea",
+        "answer": [
+            "2102-12-28 21:50:00"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "is sodium chloride 0.9% 500 ml lvp prescribed in 12/2105 to patient 006-47576?",
+        "template": "has patient 006-47576 been prescribed sodium chloride 0.9% 500 ml lvp in 12/2105?",
+        "query": "select count(*)>0 from medication where medication.patientunitstayid in ( select patient.patientunitstayid from patient where patient.patienthealthsystemstayid in ( select patient.patienthealthsystemstayid from patient where patient.uniquepid = '006-47576' ) ) and medication.drugname = 'sodium chloride 0.9% 500 ml lvp' and strftime('%Y-%m',medication.drugstarttime) = '2105-12'",
+        "value": {
+            "patient_id": "006-47576",
+            "drug_name": "sodium chloride 0.9% 500 ml lvp"
+        },
+        "q_tag": "has_verb patient {patient_id} been prescribed {drug_name} [time_filter_global1]?",
+        "t_tag": [
+            "abs-month-in",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "has_verb patient {patient_id} been prescribed {drug_name} [time_filter_global1:abs-month-in]?",
+        "department": "['other', 'physician', 'nursing']",
+        "importance": "high",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "64737c7e8e7713ca1cefc9d7",
+        "answer": [
+            "1"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "was patient 030-28944 prescribed acetaminophen (tylenol) tab 650 mg during the last hospital encounter?",
+        "template": "has patient 030-28944 been prescribed acetaminophen (tylenol) tab 650 mg on the last hospital visit?",
+        "query": "select count(*)>0 from medication where medication.patientunitstayid in ( select patient.patientunitstayid from patient where patient.patienthealthsystemstayid in ( select patient.patienthealthsystemstayid from patient where patient.uniquepid = '030-28944' and patient.hospitaldischargetime is not null order by patient.hospitaladmittime desc limit 1 ) ) and medication.drugname = 'acetaminophen (tylenol) tab 650 mg'",
+        "value": {
+            "patient_id": "030-28944",
+            "drug_name": "acetaminophen (tylenol) tab 650 mg"
+        },
+        "q_tag": "has_verb patient {patient_id} been prescribed {drug_name} [time_filter_global1]?",
+        "t_tag": [
+            "rel-hosp-last",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "has_verb patient {patient_id} been prescribed {drug_name} [time_filter_global1:rel-hosp-last]?",
+        "department": "['other', 'physician', 'nursing']",
+        "importance": "high",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "e2b3949e88e68653a0e45a68",
+        "answer": [
+            "1"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "tell me whether patient 002-13643 been prescribed albumin human 25% since 75 months ago?",
+        "template": "has patient 002-13643 been prescribed albumin human 25% since 75 month ago?",
+        "query": "select count(*)>0 from medication where medication.patientunitstayid in ( select patient.patientunitstayid from patient where patient.patienthealthsystemstayid in ( select patient.patienthealthsystemstayid from patient where patient.uniquepid = '002-13643' ) ) and medication.drugname = 'albumin human 25%' and datetime(medication.drugstarttime) >= datetime(current_time,'-75 month')",
+        "value": {
+            "drug_name": "albumin human 25%",
+            "patient_id": "002-13643"
+        },
+        "q_tag": "has_verb patient {patient_id} been prescribed {drug_name} [time_filter_global1]?",
+        "t_tag": [
+            "rel-month-since",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "has_verb patient {patient_id} been prescribed {drug_name} [time_filter_global1:rel-month-since]?",
+        "department": "['other', 'physician', 'nursing']",
+        "importance": "high",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "dd093e9bc6d269ef2c28f4d3",
+        "answer": [
+            "1"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "tell me whether patient 004-66442 got 30 ml cup : alum & mag hydroxide-simeth 200-200-20 mg/5ml po susp until 03/2102?",
+        "template": "has patient 004-66442 been prescribed 30 ml cup : alum & mag hydroxide-simeth 200-200-20 mg/5ml po susp until 03/2102?",
+        "query": "select count(*)>0 from medication where medication.patientunitstayid in ( select patient.patientunitstayid from patient where patient.patienthealthsystemstayid in ( select patient.patienthealthsystemstayid from patient where patient.uniquepid = '004-66442' ) ) and medication.drugname = '30 ml cup : alum & mag hydroxide-simeth 200-200-20 mg/5ml po susp' and strftime('%Y-%m',medication.drugstarttime) <= '2102-03'",
+        "value": {
+            "patient_id": "004-66442",
+            "drug_name": "30 ml cup : alum & mag hydroxide-simeth 200-200-20 mg/5ml po susp"
+        },
+        "q_tag": "has_verb patient {patient_id} been prescribed {drug_name} [time_filter_global1]?",
+        "t_tag": [
+            "abs-month-until",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "has_verb patient {patient_id} been prescribed {drug_name} [time_filter_global1:abs-month-until]?",
+        "department": "['other', 'physician', 'nursing']",
+        "importance": "high",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "1623078f954f5e7c1f38d4bc",
+        "answer": [
+            "1"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how many times levofloxacin 750 mg in d5w 150ml was prescribed until 05/2104 for patient 015-80402?",
+        "template": "count the number of times that patient 015-80402 were prescribed levofloxacin 750 mg in d5w 150ml until 05/2104.",
+        "query": "select count(*) from medication where medication.patientunitstayid in ( select patient.patientunitstayid from patient where patient.patienthealthsystemstayid in ( select patient.patienthealthsystemstayid from patient where patient.uniquepid = '015-80402' ) ) and medication.drugname = 'levofloxacin 750 mg in d5w 150ml' and strftime('%Y-%m',medication.drugstarttime) <= '2104-05'",
+        "value": {
+            "patient_id": "015-80402",
+            "drug_name": "levofloxacin 750 mg in d5w 150ml"
+        },
+        "q_tag": "count the number of times that patient {patient_id} were prescribed {drug_name} [time_filter_global1].",
+        "t_tag": [
+            "abs-month-until",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of times that patient {patient_id} were prescribed {drug_name} [time_filter_global1:abs-month-until].",
+        "department": "['physician']",
+        "importance": "medium",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "22ec72ff1ae03d918fcd8ae8",
+        "answer": [
+            "1"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "count the number of times that furosemide 40 mg po tabs has been prescribed to patient 002-45437 until 2104.",
+        "template": "count the number of times that patient 002-45437 were prescribed furosemide 40 mg po tabs until 2104.",
+        "query": "select count(*) from medication where medication.patientunitstayid in ( select patient.patientunitstayid from patient where patient.patienthealthsystemstayid in ( select patient.patienthealthsystemstayid from patient where patient.uniquepid = '002-45437' ) ) and medication.drugname = 'furosemide 40 mg po tabs' and strftime('%Y',medication.drugstarttime) <= '2104'",
+        "value": {
+            "patient_id": "002-45437",
+            "drug_name": "furosemide 40 mg po tabs"
+        },
+        "q_tag": "count the number of times that patient {patient_id} were prescribed {drug_name} [time_filter_global1].",
+        "t_tag": [
+            "abs-year-until",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of times that patient {patient_id} were prescribed {drug_name} [time_filter_global1:abs-year-until].",
+        "department": "['physician']",
+        "importance": "medium",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "38540f86f6e6adc2362a2943",
+        "answer": [
+            "1"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how many times is warfarin sodium 5 mg po tabs ordered for patient 028-50921 since 2100?",
+        "template": "count the number of times that patient 028-50921 were prescribed warfarin sodium 5 mg po tabs since 2100.",
+        "query": "select count(*) from medication where medication.patientunitstayid in ( select patient.patientunitstayid from patient where patient.patienthealthsystemstayid in ( select patient.patienthealthsystemstayid from patient where patient.uniquepid = '028-50921' ) ) and medication.drugname = 'warfarin sodium 5 mg po tabs' and strftime('%Y',medication.drugstarttime) >= '2100'",
+        "value": {
+            "patient_id": "028-50921",
+            "drug_name": "warfarin sodium 5 mg po tabs"
+        },
+        "q_tag": "count the number of times that patient {patient_id} were prescribed {drug_name} [time_filter_global1].",
+        "t_tag": [
+            "abs-year-since",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of times that patient {patient_id} were prescribed {drug_name} [time_filter_global1:abs-year-since].",
+        "department": "['physician']",
+        "importance": "medium",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "6a38eca2d32a7c0cadb2fac0",
+        "answer": [
+            "2"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how many times is dexmedetomidine prescribed to patient 032-21820 in this month?",
+        "template": "count the number of times that patient 032-21820 were prescribed dexmedetomidine this month.",
+        "query": "select count(*) from medication where medication.patientunitstayid in ( select patient.patientunitstayid from patient where patient.patienthealthsystemstayid in ( select patient.patienthealthsystemstayid from patient where patient.uniquepid = '032-21820' ) ) and medication.drugname = 'dexmedetomidine' and datetime(medication.drugstarttime,'start of month') = datetime(current_time,'start of month','-0 month')",
+        "value": {
+            "patient_id": "032-21820",
+            "drug_name": "dexmedetomidine"
+        },
+        "q_tag": "count the number of times that patient {patient_id} were prescribed {drug_name} [time_filter_global1].",
+        "t_tag": [
+            "rel-month-this",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of times that patient {patient_id} were prescribed {drug_name} [time_filter_global1:rel-month-this].",
+        "department": "['physician']",
+        "importance": "medium",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "4c1c583813ebac1c72e230cc",
+        "answer": [
+            "0"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "what was the four year survival rate for patients who were prescribed warfarin sodium 7.5 mg po tabs after having been diagnosed with anemia - chronic blood loss anemia?",
+        "template": "what is the four year survival rate of patients who were prescribed warfarin sodium 7.5 mg po tabs after having been diagnosed with anemia - chronic blood loss anemia?",
+        "query": "select sum( case when patient.hospitaldischargestatus = 'alive' then 1 when strftime('%j',patient.hospitaldischargetime) - strftime('%j',t4.diagnosistime) > 4 * 365 then 1 else 0 end ) * 100 / count(*) from ( select t2.uniquepid, t2.diagnosistime from ( select t1.uniquepid, t1.diagnosistime from ( select patient.uniquepid, diagnosis.diagnosistime from diagnosis join patient on diagnosis.patientunitstayid = patient.patientunitstayid where diagnosis.diagnosisname = 'anemia - chronic blood loss anemia' group by patient.uniquepid having min(diagnosis.diagnosistime) = diagnosis.diagnosistime ) as t1 ) as t2 join ( select patient.uniquepid, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = 'warfarin sodium 7.5 mg po tabs' ) as t3 on t2.uniquepid = t3.uniquepid where t2.diagnosistime < t3.drugstarttime ) as t4 join patient on t4.uniquepid = patient.uniquepid",
+        "value": {
+            "diagnosis_name": "anemia - chronic blood loss anemia",
+            "drug_name": "warfarin sodium 7.5 mg po tabs"
+        },
+        "q_tag": "what is the [n_survival_period] survival rate of patients who were prescribed {drug_name} after having been diagnosed with {diagnosis_name}?",
+        "t_tag": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "four year",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what is the [n_survival_period:four year] survival rate of patients who were prescribed {drug_name} after having been diagnosed with {diagnosis_name}?",
+        "department": "['health_records']",
+        "importance": "medium",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "4e49acfa5359e061d0511796",
+        "answer": [
+            "0"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "what is the three year survival probability for patients who were prescribed potassium chloride crys er 20 meq po tbcr after having been diagnosed with valvular stenosis?",
+        "template": "what is the three year survival rate of patients who were prescribed potassium chloride crys er 20 meq po tbcr after having been diagnosed with valvular stenosis?",
+        "query": "select sum( case when patient.hospitaldischargestatus = 'alive' then 1 when strftime('%j',patient.hospitaldischargetime) - strftime('%j',t4.diagnosistime) > 3 * 365 then 1 else 0 end ) * 100 / count(*) from ( select t2.uniquepid, t2.diagnosistime from ( select t1.uniquepid, t1.diagnosistime from ( select patient.uniquepid, diagnosis.diagnosistime from diagnosis join patient on diagnosis.patientunitstayid = patient.patientunitstayid where diagnosis.diagnosisname = 'valvular stenosis' group by patient.uniquepid having min(diagnosis.diagnosistime) = diagnosis.diagnosistime ) as t1 ) as t2 join ( select patient.uniquepid, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = 'potassium chloride crys er 20 meq po tbcr' ) as t3 on t2.uniquepid = t3.uniquepid where t2.diagnosistime < t3.drugstarttime ) as t4 join patient on t4.uniquepid = patient.uniquepid",
+        "value": {
+            "diagnosis_name": "valvular stenosis",
+            "drug_name": "potassium chloride crys er 20 meq po tbcr"
+        },
+        "q_tag": "what is the [n_survival_period] survival rate of patients who were prescribed {drug_name} after having been diagnosed with {diagnosis_name}?",
+        "t_tag": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "three year",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what is the [n_survival_period:three year] survival rate of patients who were prescribed {drug_name} after having been diagnosed with {diagnosis_name}?",
+        "department": "['health_records']",
+        "importance": "medium",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "ce7b4a32fa2ad8066a5e0d23",
+        "answer": [
+            "100"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "what is the two year survival rate of patients prescribed with piperacillin-tazobactam 3.375 g ivpb after diagnosed with malignancy?",
+        "template": "what is the two year survival rate of patients who were prescribed piperacillin-tazobactam 3.375 g ivpb after having been diagnosed with malignancy?",
+        "query": "select sum( case when patient.hospitaldischargestatus = 'alive' then 1 when strftime('%j',patient.hospitaldischargetime) - strftime('%j',t4.diagnosistime) > 2 * 365 then 1 else 0 end ) * 100 / count(*) from ( select t2.uniquepid, t2.diagnosistime from ( select t1.uniquepid, t1.diagnosistime from ( select patient.uniquepid, diagnosis.diagnosistime from diagnosis join patient on diagnosis.patientunitstayid = patient.patientunitstayid where diagnosis.diagnosisname = 'malignancy' group by patient.uniquepid having min(diagnosis.diagnosistime) = diagnosis.diagnosistime ) as t1 ) as t2 join ( select patient.uniquepid, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = 'piperacillin-tazobactam 3.375 g ivpb' ) as t3 on t2.uniquepid = t3.uniquepid where t2.diagnosistime < t3.drugstarttime ) as t4 join patient on t4.uniquepid = patient.uniquepid",
+        "value": {
+            "diagnosis_name": "malignancy",
+            "drug_name": "piperacillin-tazobactam 3.375 g ivpb"
+        },
+        "q_tag": "what is the [n_survival_period] survival rate of patients who were prescribed {drug_name} after having been diagnosed with {diagnosis_name}?",
+        "t_tag": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "two year",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what is the [n_survival_period:two year] survival rate of patients who were prescribed {drug_name} after having been diagnosed with {diagnosis_name}?",
+        "department": "['health_records']",
+        "importance": "medium",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "d3afa46e9da3348a4986fa2c",
+        "answer": [
+            "100"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "show me the five year survival probability of patients who were prescribed clonidine hcl 0.1 mg po tabs after having been diagnosed with s/p breast biopsy?",
+        "template": "what is the five year survival rate of patients who were prescribed clonidine hcl 0.1 mg po tabs after having been diagnosed with s/p breast biopsy?",
+        "query": "select sum( case when patient.hospitaldischargestatus = 'alive' then 1 when strftime('%j',patient.hospitaldischargetime) - strftime('%j',t4.diagnosistime) > 5 * 365 then 1 else 0 end ) * 100 / count(*) from ( select t2.uniquepid, t2.diagnosistime from ( select t1.uniquepid, t1.diagnosistime from ( select patient.uniquepid, diagnosis.diagnosistime from diagnosis join patient on diagnosis.patientunitstayid = patient.patientunitstayid where diagnosis.diagnosisname = 's/p breast biopsy' group by patient.uniquepid having min(diagnosis.diagnosistime) = diagnosis.diagnosistime ) as t1 ) as t2 join ( select patient.uniquepid, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = 'clonidine hcl 0.1 mg po tabs' ) as t3 on t2.uniquepid = t3.uniquepid where t2.diagnosistime < t3.drugstarttime ) as t4 join patient on t4.uniquepid = patient.uniquepid",
+        "value": {
+            "diagnosis_name": "s/p breast biopsy",
+            "drug_name": "clonidine hcl 0.1 mg po tabs"
+        },
+        "q_tag": "what is the [n_survival_period] survival rate of patients who were prescribed {drug_name} after having been diagnosed with {diagnosis_name}?",
+        "t_tag": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "five year",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what is the [n_survival_period:five year] survival rate of patients who were prescribed {drug_name} after having been diagnosed with {diagnosis_name}?",
+        "department": "['health_records']",
+        "importance": "medium",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "c0652a91ffe4fdb1ca8bde53",
+        "answer": [
+            "100"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "among the patients who were prescribed pravastatin sodium 40 mg po tabs after having been diagnosed with pancreatitis - with pseudocyst formation, calculate the four year survival probability.",
+        "template": "what is the four year survival rate of patients who were prescribed pravastatin sodium 40 mg po tabs after having been diagnosed with pancreatitis - with pseudocyst formation?",
+        "query": "select sum( case when patient.hospitaldischargestatus = 'alive' then 1 when strftime('%j',patient.hospitaldischargetime) - strftime('%j',t4.diagnosistime) > 4 * 365 then 1 else 0 end ) * 100 / count(*) from ( select t2.uniquepid, t2.diagnosistime from ( select t1.uniquepid, t1.diagnosistime from ( select patient.uniquepid, diagnosis.diagnosistime from diagnosis join patient on diagnosis.patientunitstayid = patient.patientunitstayid where diagnosis.diagnosisname = 'pancreatitis - with pseudocyst formation' group by patient.uniquepid having min(diagnosis.diagnosistime) = diagnosis.diagnosistime ) as t1 ) as t2 join ( select patient.uniquepid, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = 'pravastatin sodium 40 mg po tabs' ) as t3 on t2.uniquepid = t3.uniquepid where t2.diagnosistime < t3.drugstarttime ) as t4 join patient on t4.uniquepid = patient.uniquepid",
+        "value": {
+            "diagnosis_name": "pancreatitis - with pseudocyst formation",
+            "drug_name": "pravastatin sodium 40 mg po tabs"
+        },
+        "q_tag": "what is the [n_survival_period] survival rate of patients who were prescribed {drug_name} after having been diagnosed with {diagnosis_name}?",
+        "t_tag": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "four year",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what is the [n_survival_period:four year] survival rate of patients who were prescribed {drug_name} after having been diagnosed with {diagnosis_name}?",
+        "department": "['health_records']",
+        "importance": "medium",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "caae71018754b8df79a8eea9",
+        "answer": [
+            "0"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how much is the average cost for a hospital that contains ceftriaxone in 2103?",
+        "template": "what was the average total hospital cost that involves a drug named ceftriaxone in 2103?",
+        "query": "select avg(t1.c1) from ( select sum(cost.cost) as c1 from cost where cost.patienthealthsystemstayid in ( select patient.patienthealthsystemstayid from patient where patient.patientunitstayid in ( select medication.patientunitstayid from medication where medication.drugname = 'ceftriaxone' ) ) and strftime('%Y',cost.chargetime) = '2103' group by cost.patienthealthsystemstayid ) as t1",
+        "value": {
+            "drug_name": "ceftriaxone"
+        },
+        "q_tag": "what is_verb the [agg_function] total hospital cost that involves a drug named {drug_name} [time_filter_global1]?",
+        "t_tag": [
+            "abs-year-in",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "average",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what is_verb the [agg_function:average] total hospital cost that involves a drug named {drug_name} [time_filter_global1:abs-year-in]?",
+        "department": "['-']",
+        "importance": "low",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "53cbbe0599ee969db504b745",
+        "answer": [
+            "4599.240000000004"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "what's the average total cost of the hospital that involves a drug called fentanyl 2000 mcg/100 ml ns in 2102?",
+        "template": "what was the average total hospital cost that involves a drug named fentanyl 2000 mcg/100 ml ns in 2102?",
+        "query": "select avg(t1.c1) from ( select sum(cost.cost) as c1 from cost where cost.patienthealthsystemstayid in ( select patient.patienthealthsystemstayid from patient where patient.patientunitstayid in ( select medication.patientunitstayid from medication where medication.drugname = 'fentanyl 2000 mcg/100 ml ns' ) ) and strftime('%Y',cost.chargetime) = '2102' group by cost.patienthealthsystemstayid ) as t1",
+        "value": {
+            "drug_name": "fentanyl 2000 mcg/100 ml ns"
+        },
+        "q_tag": "what is_verb the [agg_function] total hospital cost that involves a drug named {drug_name} [time_filter_global1]?",
+        "t_tag": [
+            "abs-year-in",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "average",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what is_verb the [agg_function:average] total hospital cost that involves a drug named {drug_name} [time_filter_global1:abs-year-in]?",
+        "department": "['-']",
+        "importance": "low",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "4b6c10552e9c0fbf2188aebc",
+        "answer": [
+            "7307.42000000001"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "what is the number of patients who have been prescribed potassium chloride 40 meq inj since 2105?",
+        "template": "count the number of patients who were prescribed potassium chloride 40 meq inj since 2105.",
+        "query": "select count( distinct patient.uniquepid ) from patient where patient.patientunitstayid in ( select medication.patientunitstayid from medication where medication.drugname = 'potassium chloride 40 meq inj' and strftime('%Y',medication.drugstarttime) >= '2105' )",
+        "value": {
+            "drug_name": "potassium chloride 40 meq inj"
+        },
+        "q_tag": "count the number of patients who were prescribed {drug_name} [time_filter_global1].",
+        "t_tag": [
+            "abs-year-since",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of patients who were prescribed {drug_name} [time_filter_global1:abs-year-since].",
+        "department": "['physician']",
+        "importance": "medium",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "1a3673e48b4e9c6473f6071c",
+        "answer": [
+            "3"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "just count the number of patients who had been prescribed acetaminophen 650mg rect supp in 2104.",
+        "template": "count the number of patients who were prescribed acetaminophen 650mg rect supp in 2104.",
+        "query": "select count( distinct patient.uniquepid ) from patient where patient.patientunitstayid in ( select medication.patientunitstayid from medication where medication.drugname = 'acetaminophen 650mg rect supp' and strftime('%Y',medication.drugstarttime) = '2104' )",
+        "value": {
+            "drug_name": "acetaminophen 650mg rect supp"
+        },
+        "q_tag": "count the number of patients who were prescribed {drug_name} [time_filter_global1].",
+        "t_tag": [
+            "abs-year-in",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of patients who were prescribed {drug_name} [time_filter_global1:abs-year-in].",
+        "department": "['physician']",
+        "importance": "medium",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "e9a8a8c4a3eb11a0e4760865",
+        "answer": [
+            "14"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how many patients were prescribed for zolpidem since 6 years ago?",
+        "template": "count the number of patients who were prescribed zolpidem since 6 year ago.",
+        "query": "select count( distinct patient.uniquepid ) from patient where patient.patientunitstayid in ( select medication.patientunitstayid from medication where medication.drugname = 'zolpidem' and datetime(medication.drugstarttime) >= datetime(current_time,'-6 year') )",
+        "value": {
+            "drug_name": "zolpidem"
+        },
+        "q_tag": "count the number of patients who were prescribed {drug_name} [time_filter_global1].",
+        "t_tag": [
+            "rel-year-since",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of patients who were prescribed {drug_name} [time_filter_global1:rel-year-since].",
+        "department": "['physician']",
+        "importance": "medium",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "2fe1bff3f8ab2b811baff5a2",
+        "answer": [
+            "6"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how many patients is warfarin sodium 2.5 mg po tabs prescribed to?",
+        "template": "count the number of patients who were prescribed warfarin sodium 2.5 mg po tabs.",
+        "query": "select count( distinct patient.uniquepid ) from patient where patient.patientunitstayid in ( select medication.patientunitstayid from medication where medication.drugname = 'warfarin sodium 2.5 mg po tabs' )",
+        "value": {
+            "drug_name": "warfarin sodium 2.5 mg po tabs"
+        },
+        "q_tag": "count the number of patients who were prescribed {drug_name} [time_filter_global1].",
+        "t_tag": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of patients who were prescribed {drug_name} [time_filter_global1:null].",
+        "department": "['physician']",
+        "importance": "medium",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "4734ea94d6bf1d020a674a59",
+        "answer": [
+            "19"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how many prescriptions were issued for potassium chloride in nacl 20-0.9 meq/l-% iv soln?",
+        "template": "count the number of potassium chloride in nacl 20-0.9 meq/l-% iv soln prescription cases.",
+        "query": "select count(*) from medication where medication.drugname = 'potassium chloride in nacl 20-0.9 meq/l-% iv soln'",
+        "value": {
+            "drug_name": "potassium chloride in nacl 20-0.9 meq/l-% iv soln"
+        },
+        "q_tag": "count the number of {drug_name} prescription cases [time_filter_global1].",
+        "t_tag": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of {drug_name} prescription cases [time_filter_global1:null].",
+        "department": "['physician', 'nursing']",
+        "importance": "n/a",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "3f83073f34758de8992ab620",
+        "answer": [
+            "11"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "what's the number of times assess pneumococcal vaccine is prescribed until 2104?",
+        "template": "count the number of assess pneumococcal vaccine prescription cases until 2104.",
+        "query": "select count(*) from medication where medication.drugname = 'assess pneumococcal vaccine' and strftime('%Y',medication.drugstarttime) <= '2104'",
+        "value": {
+            "drug_name": "assess pneumococcal vaccine"
+        },
+        "q_tag": "count the number of {drug_name} prescription cases [time_filter_global1].",
+        "t_tag": [
+            "abs-year-until",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of {drug_name} prescription cases [time_filter_global1:abs-year-until].",
+        "department": "['physician', 'nursing']",
+        "importance": "n/a",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "197bb62e54684f1f84c4c987",
+        "answer": [
+            "4"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how many times is etomidate prescribed since 3 years ago?",
+        "template": "count the number of etomidate prescription cases since 3 year ago.",
+        "query": "select count(*) from medication where medication.drugname = 'etomidate' and datetime(medication.drugstarttime) >= datetime(current_time,'-3 year')",
+        "value": {
+            "drug_name": "etomidate"
+        },
+        "q_tag": "count the number of {drug_name} prescription cases [time_filter_global1].",
+        "t_tag": [
+            "rel-year-since",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of {drug_name} prescription cases [time_filter_global1:rel-year-since].",
+        "department": "['physician', 'nursing']",
+        "importance": "n/a",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "d019c504de5160146fb03980",
+        "answer": [
+            "5"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how many enoxaparin sodium 40 mg/0.4ml sc soln prescriptions were ordered until 4 years ago?",
+        "template": "count the number of enoxaparin sodium 40 mg/0.4ml sc soln prescription cases until 4 year ago.",
+        "query": "select count(*) from medication where medication.drugname = 'enoxaparin sodium 40 mg/0.4ml sc soln' and datetime(medication.drugstarttime) <= datetime(current_time,'-4 year')",
+        "value": {
+            "drug_name": "enoxaparin sodium 40 mg/0.4ml sc soln"
+        },
+        "q_tag": "count the number of {drug_name} prescription cases [time_filter_global1].",
+        "t_tag": [
+            "rel-year-until",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of {drug_name} prescription cases [time_filter_global1:rel-year-until].",
+        "department": "['physician', 'nursing']",
+        "importance": "n/a",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "a8dc9837bf320a4b297d25dc",
+        "answer": [
+            "0"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how many methylprednisolone 125 mg inj prescriptions took place until 1 year ago?",
+        "template": "count the number of methylprednisolone 125 mg inj prescription cases until 1 year ago.",
+        "query": "select count(*) from medication where medication.drugname = 'methylprednisolone 125 mg inj' and datetime(medication.drugstarttime) <= datetime(current_time,'-1 year')",
+        "value": {
+            "drug_name": "methylprednisolone 125 mg inj"
+        },
+        "q_tag": "count the number of {drug_name} prescription cases [time_filter_global1].",
+        "t_tag": [
+            "rel-year-until",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of {drug_name} prescription cases [time_filter_global1:rel-year-until].",
+        "department": "['physician', 'nursing']",
+        "importance": "n/a",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "e8282b49cb4dddd60aeaa9a4",
+        "answer": [
+            "0"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "count the number of patients who had been prescribed albumin human 25 % iv soln within 2 months after having received a orthopedics consultation procedure since 6 years ago.",
+        "template": "count the number of patients who were prescribed albumin human 25 % iv soln within 2 month after having received a orthopedics consultation procedure since 6 year ago.",
+        "query": "select count( distinct t1.uniquepid ) from ( select patient.uniquepid, treatment.treatmenttime from treatment join patient on treatment.patientunitstayid = patient.patientunitstayid where treatment.treatmentname = 'orthopedics consultation' and datetime(treatment.treatmenttime) >= datetime(current_time,'-6 year') ) as t1 join ( select patient.uniquepid, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = 'albumin human 25 % iv soln' and datetime(medication.drugstarttime) >= datetime(current_time,'-6 year') ) as t2 where t1.treatmenttime < t2.drugstarttime and datetime(t2.drugstarttime) between datetime(t1.treatmenttime) and datetime(t1.treatmenttime,'+2 month')",
+        "value": {
+            "drug_name": "albumin human 25 % iv soln",
+            "procedure_name": "orthopedics consultation"
+        },
+        "q_tag": "count the number of patients who were prescribed {drug_name} [time_filter_within] after having received a {procedure_name} procedure [time_filter_global1].",
+        "t_tag": [
+            "rel-year-since",
+            "",
+            "within-n_month",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of patients who were prescribed {drug_name} [time_filter_within:within-n_month] after having received a {procedure_name} procedure [time_filter_global1:rel-year-since].",
+        "department": "['-']",
+        "importance": "medium",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "d093fb4dd24e7df962051e18",
+        "answer": [
+            "4"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "count the number of patients who were prescribed albumin 5% 250 ml inj in the same month after having received a bronchodilator - metered dose until 2104.",
+        "template": "count the number of patients who were prescribed albumin 5% 250 ml inj within the same month after having received a bronchodilator - metered dose procedure until 2104.",
+        "query": "select count( distinct t1.uniquepid ) from ( select patient.uniquepid, treatment.treatmenttime from treatment join patient on treatment.patientunitstayid = patient.patientunitstayid where treatment.treatmentname = 'bronchodilator - metered dose' and strftime('%Y',treatment.treatmenttime) <= '2104' ) as t1 join ( select patient.uniquepid, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = 'albumin 5% 250 ml inj' and strftime('%Y',medication.drugstarttime) <= '2104' ) as t2 where t1.treatmenttime < t2.drugstarttime and datetime(t1.treatmenttime,'start of month') = datetime(t2.drugstarttime,'start of month')",
+        "value": {
+            "drug_name": "albumin 5% 250 ml inj",
+            "procedure_name": "bronchodilator - metered dose"
+        },
+        "q_tag": "count the number of patients who were prescribed {drug_name} [time_filter_within] after having received a {procedure_name} procedure [time_filter_global1].",
+        "t_tag": [
+            "abs-year-until",
+            "",
+            "within-month",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of patients who were prescribed {drug_name} [time_filter_within:within-month] after having received a {procedure_name} procedure [time_filter_global1:abs-year-until].",
+        "department": "['-']",
+        "importance": "medium",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "fe4273f61001955b50585a6b",
+        "answer": [
+            "1"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how many patients were prescribed with percocet 5/325 tab in the same hospital encounter after the procedure of sedative agent?",
+        "template": "count the number of patients who were prescribed percocet 5/325 tab within the same hospital visit after having received a sedative agent procedure.",
+        "query": "select count( distinct t1.uniquepid ) from ( select patient.uniquepid, treatment.treatmenttime, patient.patienthealthsystemstayid from treatment join patient on treatment.patientunitstayid = patient.patientunitstayid where treatment.treatmentname = 'sedative agent' ) as t1 join ( select patient.uniquepid, medication.drugstarttime, patient.patienthealthsystemstayid from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = 'percocet 5/325 tab' ) as t2 where t1.treatmenttime < t2.drugstarttime and t1.patienthealthsystemstayid = t2.patienthealthsystemstayid",
+        "value": {
+            "drug_name": "percocet 5/325 tab",
+            "procedure_name": "sedative agent"
+        },
+        "q_tag": "count the number of patients who were prescribed {drug_name} [time_filter_within] after having received a {procedure_name} procedure [time_filter_global1].",
+        "t_tag": [
+            "",
+            "",
+            "within-hosp",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of patients who were prescribed {drug_name} [time_filter_within:within-hosp] after having received a {procedure_name} procedure [time_filter_global1:null].",
+        "department": "['-']",
+        "importance": "medium",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "fedbcc9aec74f87fd5f95262",
+        "answer": [
+            "4"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "in 2102, how many patients were prescribed with 2 ml vial : fentanyl citrate 0.05 mg/ml ij soln during the same hospital encounter after having underwent plastic surgery consultation?",
+        "template": "count the number of patients who were prescribed 2 ml vial : fentanyl citrate 0.05 mg/ml ij soln within the same hospital visit after having received a plastic surgery consultation procedure in 2102.",
+        "query": "select count( distinct t1.uniquepid ) from ( select patient.uniquepid, treatment.treatmenttime, patient.patienthealthsystemstayid from treatment join patient on treatment.patientunitstayid = patient.patientunitstayid where treatment.treatmentname = 'plastic surgery consultation' and strftime('%Y',treatment.treatmenttime) = '2102' ) as t1 join ( select patient.uniquepid, medication.drugstarttime, patient.patienthealthsystemstayid from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = '2 ml vial : fentanyl citrate 0.05 mg/ml ij soln' and strftime('%Y',medication.drugstarttime) = '2102' ) as t2 where t1.treatmenttime < t2.drugstarttime and t1.patienthealthsystemstayid = t2.patienthealthsystemstayid",
+        "value": {
+            "drug_name": "2 ml vial : fentanyl citrate 0.05 mg/ml ij soln",
+            "procedure_name": "plastic surgery consultation"
+        },
+        "q_tag": "count the number of patients who were prescribed {drug_name} [time_filter_within] after having received a {procedure_name} procedure [time_filter_global1].",
+        "t_tag": [
+            "abs-year-in",
+            "",
+            "within-hosp",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of patients who were prescribed {drug_name} [time_filter_within:within-hosp] after having received a {procedure_name} procedure [time_filter_global1:abs-year-in].",
+        "department": "['-']",
+        "importance": "medium",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "4c7091280f73e5dadf95f7df",
+        "answer": [
+            "0"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "since 5 years ago, how many patients were prescribed with aspart insulin in the same hospital visit after having received valve replacement or repair?",
+        "template": "count the number of patients who were prescribed aspart insulin within the same hospital visit after having received a valve replacement or repair procedure since 5 year ago.",
+        "query": "select count( distinct t1.uniquepid ) from ( select patient.uniquepid, treatment.treatmenttime, patient.patienthealthsystemstayid from treatment join patient on treatment.patientunitstayid = patient.patientunitstayid where treatment.treatmentname = 'valve replacement or repair' and datetime(treatment.treatmenttime) >= datetime(current_time,'-5 year') ) as t1 join ( select patient.uniquepid, medication.drugstarttime, patient.patienthealthsystemstayid from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = 'aspart insulin' and datetime(medication.drugstarttime) >= datetime(current_time,'-5 year') ) as t2 where t1.treatmenttime < t2.drugstarttime and t1.patienthealthsystemstayid = t2.patienthealthsystemstayid",
+        "value": {
+            "drug_name": "aspart insulin",
+            "procedure_name": "valve replacement or repair"
+        },
+        "q_tag": "count the number of patients who were prescribed {drug_name} [time_filter_within] after having received a {procedure_name} procedure [time_filter_global1].",
+        "t_tag": [
+            "rel-year-since",
+            "",
+            "within-hosp",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of patients who were prescribed {drug_name} [time_filter_within:within-hosp] after having received a {procedure_name} procedure [time_filter_global1:rel-year-since].",
+        "department": "['-']",
+        "importance": "medium",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "d5cc0ceaca253fac0202376a",
+        "answer": [
+            "3"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "count the numbers of patients who were prescribed hydromorphone 1 mg/1 ml syr within 2 months after having been diagnosed with chronic kidney disease - stage 3 (gfr 30-59) since 1 year ago.",
+        "template": "count the number of patients who were prescribed hydromorphone 1 mg/1 ml syr within 2 month after having been diagnosed with chronic kidney disease - stage 3 (gfr 30-59) since 1 year ago.",
+        "query": "select count( distinct t1.uniquepid ) from ( select patient.uniquepid, diagnosis.diagnosistime from diagnosis join patient on diagnosis.patientunitstayid = patient.patientunitstayid where diagnosis.diagnosisname = 'chronic kidney disease - stage 3 (gfr 30-59)' and datetime(diagnosis.diagnosistime) >= datetime(current_time,'-1 year') ) as t1 join ( select patient.uniquepid, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = 'hydromorphone 1 mg/1 ml syr' and datetime(medication.drugstarttime) >= datetime(current_time,'-1 year') ) as t2 where t1.diagnosistime < t2.drugstarttime and datetime(t2.drugstarttime) between datetime(t1.diagnosistime) and datetime(t1.diagnosistime,'+2 month')",
+        "value": {
+            "diagnosis_name": "chronic kidney disease - stage 3 (gfr 30-59)",
+            "drug_name": "hydromorphone 1 mg/1 ml syr"
+        },
+        "q_tag": "count the number of patients who were prescribed {drug_name} [time_filter_within] after having been diagnosed with {diagnosis_name} [time_filter_global1].",
+        "t_tag": [
+            "rel-year-since",
+            "",
+            "within-n_month",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of patients who were prescribed {drug_name} [time_filter_within:within-n_month] after having been diagnosed with {diagnosis_name} [time_filter_global1:rel-year-since].",
+        "department": "['physician', 'insurance_review']",
+        "importance": "medium",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "db54460ab4444f3421a2623d",
+        "answer": [
+            "28"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "count the number of patients for whom prmx dexmedetomidine 400mcg/100ml ns drip was prescribed within 2 months after having been diagnosed until 2104 with tia.",
+        "template": "count the number of patients who were prescribed prmx dexmedetomidine 400mcg/100ml ns drip within 2 month after having been diagnosed with tia until 2104.",
+        "query": "select count( distinct t1.uniquepid ) from ( select patient.uniquepid, diagnosis.diagnosistime from diagnosis join patient on diagnosis.patientunitstayid = patient.patientunitstayid where diagnosis.diagnosisname = 'tia' and strftime('%Y',diagnosis.diagnosistime) <= '2104' ) as t1 join ( select patient.uniquepid, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = 'prmx dexmedetomidine 400mcg/100ml ns drip' and strftime('%Y',medication.drugstarttime) <= '2104' ) as t2 where t1.diagnosistime < t2.drugstarttime and datetime(t2.drugstarttime) between datetime(t1.diagnosistime) and datetime(t1.diagnosistime,'+2 month')",
+        "value": {
+            "diagnosis_name": "tia",
+            "drug_name": "prmx dexmedetomidine 400mcg/100ml ns drip"
+        },
+        "q_tag": "count the number of patients who were prescribed {drug_name} [time_filter_within] after having been diagnosed with {diagnosis_name} [time_filter_global1].",
+        "t_tag": [
+            "abs-year-until",
+            "",
+            "within-n_month",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of patients who were prescribed {drug_name} [time_filter_within:within-n_month] after having been diagnosed with {diagnosis_name} [time_filter_global1:abs-year-until].",
+        "department": "['physician', 'insurance_review']",
+        "importance": "medium",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "8a738171d177f27c9caf14f8",
+        "answer": [
+            "1"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "until 2104, how many patients were prescribed with aspirin 325 mg po tabs within the same hospital visit after being diagnosed with anemia?",
+        "template": "count the number of patients who were prescribed aspirin 325 mg po tabs within the same hospital visit after having been diagnosed with anemia until 2104.",
+        "query": "select count( distinct t1.uniquepid ) from ( select patient.uniquepid, diagnosis.diagnosistime, patient.patienthealthsystemstayid from diagnosis join patient on diagnosis.patientunitstayid = patient.patientunitstayid where diagnosis.diagnosisname = 'anemia' and strftime('%Y',diagnosis.diagnosistime) <= '2104' ) as t1 join ( select patient.uniquepid, medication.drugstarttime, patient.patienthealthsystemstayid from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = 'aspirin 325 mg po tabs' and strftime('%Y',medication.drugstarttime) <= '2104' ) as t2 where t1.diagnosistime < t2.drugstarttime and t1.patienthealthsystemstayid = t2.patienthealthsystemstayid",
+        "value": {
+            "diagnosis_name": "anemia",
+            "drug_name": "aspirin 325 mg po tabs"
+        },
+        "q_tag": "count the number of patients who were prescribed {drug_name} [time_filter_within] after having been diagnosed with {diagnosis_name} [time_filter_global1].",
+        "t_tag": [
+            "abs-year-until",
+            "",
+            "within-hosp",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of patients who were prescribed {drug_name} [time_filter_within:within-hosp] after having been diagnosed with {diagnosis_name} [time_filter_global1:abs-year-until].",
+        "department": "['physician', 'insurance_review']",
+        "importance": "medium",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "184cf72c8fe92f9423f0e9c2",
+        "answer": [
+            "5"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "how many patients were prescribed with acetaminophen 650 mg re supp within 2 months after the diagnosis of hepatorenal syndrome,?",
+        "template": "count the number of patients who were prescribed acetaminophen 650 mg re supp within 2 month after having been diagnosed with hepatorenal syndrome.",
+        "query": "select count( distinct t1.uniquepid ) from ( select patient.uniquepid, diagnosis.diagnosistime from diagnosis join patient on diagnosis.patientunitstayid = patient.patientunitstayid where diagnosis.diagnosisname = 'hepatorenal syndrome' ) as t1 join ( select patient.uniquepid, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = 'acetaminophen 650 mg re supp' ) as t2 where t1.diagnosistime < t2.drugstarttime and datetime(t2.drugstarttime) between datetime(t1.diagnosistime) and datetime(t1.diagnosistime,'+2 month')",
+        "value": {
+            "diagnosis_name": "hepatorenal syndrome",
+            "drug_name": "acetaminophen 650 mg re supp"
+        },
+        "q_tag": "count the number of patients who were prescribed {drug_name} [time_filter_within] after having been diagnosed with {diagnosis_name} [time_filter_global1].",
+        "t_tag": [
+            "",
+            "",
+            "within-n_month",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of patients who were prescribed {drug_name} [time_filter_within:within-n_month] after having been diagnosed with {diagnosis_name} [time_filter_global1:null].",
+        "department": "['physician', 'insurance_review']",
+        "importance": "medium",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "cd0ae53c723ecefc85d6ac96",
+        "answer": [
+            "3"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "until 2104, how many patients were prescribed with 1000 ml flex cont : sodium chloride 0.9 % iv soln within the same hospital visit after the diagnosis with pancreatitis - acute?",
+        "template": "count the number of patients who were prescribed 1000 ml flex cont : sodium chloride 0.9 % iv soln within the same hospital visit after having been diagnosed with pancreatitis - acute until 2104.",
+        "query": "select count( distinct t1.uniquepid ) from ( select patient.uniquepid, diagnosis.diagnosistime, patient.patienthealthsystemstayid from diagnosis join patient on diagnosis.patientunitstayid = patient.patientunitstayid where diagnosis.diagnosisname = 'pancreatitis - acute' and strftime('%Y',diagnosis.diagnosistime) <= '2104' ) as t1 join ( select patient.uniquepid, medication.drugstarttime, patient.patienthealthsystemstayid from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = '1000 ml flex cont : sodium chloride 0.9 % iv soln' and strftime('%Y',medication.drugstarttime) <= '2104' ) as t2 where t1.diagnosistime < t2.drugstarttime and t1.patienthealthsystemstayid = t2.patienthealthsystemstayid",
+        "value": {
+            "diagnosis_name": "pancreatitis - acute",
+            "drug_name": "1000 ml flex cont : sodium chloride 0.9 % iv soln"
+        },
+        "q_tag": "count the number of patients who were prescribed {drug_name} [time_filter_within] after having been diagnosed with {diagnosis_name} [time_filter_global1].",
+        "t_tag": [
+            "abs-year-until",
+            "",
+            "within-hosp",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "count the number of patients who were prescribed {drug_name} [time_filter_within:within-hosp] after having been diagnosed with {diagnosis_name} [time_filter_global1:abs-year-until].",
+        "department": "['physician', 'insurance_review']",
+        "importance": "medium",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "69d62040d7f130f8d952d6f5",
+        "answer": [
+            "0"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "among patients who were prescribed digoxin 125 mcg po tabs, what are the three most frequently prescribed drugs at the same time since 5 years ago?",
+        "template": "what are the top three frequent prescribed drugs for patients who were also prescribed digoxin 125 mcg po tabs at the same time since 5 year ago?",
+        "query": "select t3.drugname from ( select t2.drugname, dense_rank() over ( order by count(*) desc ) as c1 from ( select patient.uniquepid, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = 'digoxin 125 mcg po tabs' and datetime(medication.drugstarttime) >= datetime(current_time,'-5 year') ) as t1 join ( select patient.uniquepid, medication.drugname, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where datetime(medication.drugstarttime) >= datetime(current_time,'-5 year') ) as t2 on t1.uniquepid = t2.uniquepid where datetime(t1.drugstarttime) = datetime(t2.drugstarttime) group by t2.drugname ) as t3 where t3.c1 <= 3",
+        "value": {
+            "drug_name": "digoxin 125 mcg po tabs"
+        },
+        "q_tag": "what are_verb the top [n_rank] frequent prescribed drugs for patients who were also prescribed {drug_name} [time_filter_within] [time_filter_global1]?",
+        "t_tag": [
+            "rel-year-since",
+            "",
+            "within-same",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "three",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what are_verb the top [n_rank:three] frequent prescribed drugs for patients who were also prescribed {drug_name} [time_filter_within:within-same] [time_filter_global1:rel-year-since]?",
+        "department": "['physician']",
+        "importance": "high",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "3d33529883592c5a93d440bb",
+        "answer": [
+            "digoxin 125 mcg po tabs",
+            "tylenol",
+            "sodium chloride",
+            "propofol",
+            "lorazepam",
+            "lasix",
+            "kcl 10 meq/100 ml",
+            "cefepime",
+            "aspirin ec",
+            "30 ml cup : alum & mag hydroxide-simeth 200-200-20 mg/5ml po susp",
+            "3 ml plas cont: albuterol sulfate (2.5 mg/3ml) 0.083% in nebu",
+            "2 ml : ondansetron hcl 4 mg/2ml iv soln"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "what are the three most commonly prescribed drugs for patients who were also prescribed merrem at the same time in 2105?",
+        "template": "what are the top three frequent prescribed drugs for patients who were also prescribed merrem at the same time in 2105?",
+        "query": "select t3.drugname from ( select t2.drugname, dense_rank() over ( order by count(*) desc ) as c1 from ( select patient.uniquepid, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = 'merrem' and strftime('%Y',medication.drugstarttime) = '2105' ) as t1 join ( select patient.uniquepid, medication.drugname, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where strftime('%Y',medication.drugstarttime) = '2105' ) as t2 on t1.uniquepid = t2.uniquepid where datetime(t1.drugstarttime) = datetime(t2.drugstarttime) group by t2.drugname ) as t3 where t3.c1 <= 3",
+        "value": {
+            "drug_name": "merrem"
+        },
+        "q_tag": "what are_verb the top [n_rank] frequent prescribed drugs for patients who were also prescribed {drug_name} [time_filter_within] [time_filter_global1]?",
+        "t_tag": [
+            "abs-year-in",
+            "",
+            "within-same",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "three",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what are_verb the top [n_rank:three] frequent prescribed drugs for patients who were also prescribed {drug_name} [time_filter_within:within-same] [time_filter_global1:abs-year-in]?",
+        "department": "['physician']",
+        "importance": "high",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "a049da79547b83bb5d69b0b7",
+        "answer": [
+            "merrem"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "what are the top three most often prescribed drugs that patients were prescribed during the same month after they were prescribed with xanax since 2105?",
+        "template": "what are the top three frequent drugs that patients were prescribed within the same month after having been prescribed with xanax since 2105?",
+        "query": "select t3.drugname from ( select t2.drugname, dense_rank() over ( order by count(*) desc ) as c1 from ( select patient.uniquepid, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = 'xanax' and strftime('%Y',medication.drugstarttime) >= '2105' ) as t1 join ( select patient.uniquepid, medication.drugname, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where strftime('%Y',medication.drugstarttime) >= '2105' ) as t2 on t1.uniquepid = t2.uniquepid where t1.drugstarttime < t2.drugstarttime and datetime(t1.drugstarttime,'start of month') = datetime(t2.drugstarttime,'start of month') group by t2.drugname ) as t3 where t3.c1 <= 3",
+        "value": {
+            "drug_name": "xanax"
+        },
+        "q_tag": "what are_verb the top [n_rank] frequent drugs that patients were prescribed [time_filter_within] after having been prescribed with {drug_name} [time_filter_global1]?",
+        "t_tag": [
+            "abs-year-since",
+            "",
+            "within-month",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "three",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what are_verb the top [n_rank:three] frequent drugs that patients were prescribed [time_filter_within:within-month] after having been prescribed with {drug_name} [time_filter_global1:abs-year-since]?",
+        "department": "['-']",
+        "importance": "n/a",
+        "para_type": "machine",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "00394b45697c7d49ecb6d8d6",
+        "answer": [
+            "ondansetron",
+            "tylenol",
+            "1000 ml  -  sodium chloride 0.9 % iv soln",
+            "sodium chloride 0.9%"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "list the top three most frequent drugs that patients were prescribed with within 2 months after being prescribed with oxycodone (oxy ir) cap-tab 5 mg until 2104.",
+        "template": "what were the top three frequent drugs that patients were prescribed within 2 month after having been prescribed with oxycodone (oxy ir) cap-tab 5 mg until 2104?",
+        "query": "select t3.drugname from ( select t2.drugname, dense_rank() over ( order by count(*) desc ) as c1 from ( select patient.uniquepid, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = 'oxycodone (oxy ir) cap-tab 5 mg' and strftime('%Y',medication.drugstarttime) <= '2104' ) as t1 join ( select patient.uniquepid, medication.drugname, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where strftime('%Y',medication.drugstarttime) <= '2104' ) as t2 on t1.uniquepid = t2.uniquepid where t1.drugstarttime < t2.drugstarttime and datetime(t2.drugstarttime) between datetime(t1.drugstarttime) and datetime(t1.drugstarttime,'+2 month') group by t2.drugname ) as t3 where t3.c1 <= 3",
+        "value": {
+            "drug_name": "oxycodone (oxy ir) cap-tab 5 mg"
+        },
+        "q_tag": "what are_verb the top [n_rank] frequent drugs that patients were prescribed [time_filter_within] after having been prescribed with {drug_name} [time_filter_global1]?",
+        "t_tag": [
+            "abs-year-until",
+            "",
+            "within-n_month",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "three",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what are_verb the top [n_rank:three] frequent drugs that patients were prescribed [time_filter_within:within-n_month] after having been prescribed with {drug_name} [time_filter_global1:abs-year-until]?",
+        "department": "['-']",
+        "importance": "n/a",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "b3e95594ab104a10b3f81f43",
+        "answer": [
+            "tylenol",
+            "potassium chloride",
+            "sodium chloride 0.9%",
+            "acetaminophen",
+            "morphine sulfate",
+            "morphine",
+            "dextrose 50%-water"
+        ]
+    },
+    {
+        "db_id": "eicu",
+        "question": "for patients who were prescribed with aspirin 325 mg ec tab since 6 years ago, what are the top five most common drugs that followed within the same month?",
+        "template": "what are the top five frequent drugs that patients were prescribed within the same month after having been prescribed with aspirin 325 mg ec tab since 6 year ago?",
+        "query": "select t3.drugname from ( select t2.drugname, dense_rank() over ( order by count(*) desc ) as c1 from ( select patient.uniquepid, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where medication.drugname = 'aspirin 325 mg ec tab' and datetime(medication.drugstarttime) >= datetime(current_time,'-6 year') ) as t1 join ( select patient.uniquepid, medication.drugname, medication.drugstarttime from medication join patient on medication.patientunitstayid = patient.patientunitstayid where datetime(medication.drugstarttime) >= datetime(current_time,'-6 year') ) as t2 on t1.uniquepid = t2.uniquepid where t1.drugstarttime < t2.drugstarttime and datetime(t1.drugstarttime,'start of month') = datetime(t2.drugstarttime,'start of month') group by t2.drugname ) as t3 where t3.c1 <= 5",
+        "value": {
+            "drug_name": "aspirin 325 mg ec tab"
+        },
+        "q_tag": "what are_verb the top [n_rank] frequent drugs that patients were prescribed [time_filter_within] after having been prescribed with {drug_name} [time_filter_global1]?",
+        "t_tag": [
+            "rel-year-since",
+            "",
+            "within-month",
+            "",
+            ""
+        ],
+        "o_tag": [
+            "",
+            "",
+            "",
+            "five",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "tag": "what are_verb the top [n_rank:five] frequent drugs that patients were prescribed [time_filter_within:within-month] after having been prescribed with {drug_name} [time_filter_global1:rel-year-since]?",
+        "department": "['-']",
+        "importance": "n/a",
+        "para_type": "human",
+        "is_impossible": false,
+        "split": "valid",
+        "id": "8134fca51c4632388bba3a69",
+        "answer": [
+            "sodium chloride 0.9 % iv : 1000 ml",
+            "1000 ml flex cont : sodium chloride 0.9 % iv soln",
+            "tylenol",
+            "potassium chloride 20 meq po pack",
+            "potassium chloride",
+            "magnesium hydroxide",
+            "lasix",
+            "hydralazine",
+            "colace",
+            "calcium gluconate",
+            "bisacodyl 10 mg re supp",
+            "acetaminophen",
+            "zolpidem 5 mg tablet",
+            "warfarin sodium 1 mg po tabs",
+            "vancomycin 1 gm in ns 250 ml ivpb",
+            "vancomycin 1 g mini-bag plus (vial mate)",
+            "tramadol hcl 50 mg po tabs",
+            "sodium phosphate 15 mmol/100ml ns",
+            "sodium chloride 0.9% 500 ml pb",
+            "sodium chloride 0.9% 500 ml bag",
+            "sodium chloride 0.9% 1000 ml lvp",
+            "sodium chloride 0.9%  sso",
+            "sodium chloride 0.9 % syringe : 10 ml syringe",
+            "sodium chloride 0.9 % iv bolus",
+            "sodium chloride 0.9 % ij soln",
+            "sodium chloride 0.9 %",
+            "sodium chloride",
+            "sodium bicarbonate 8.4% (adult) syr",
+            "sertraline hcl 50 mg po tabs",
+            "proventil,ventolin",
+            "protonix",
+            "propofol 1000 mg/100 ml",
+            "propofol 10 mg/1 ml 100ml sdv inj",
+            "potassium chloride 40 meq/100 ml iv piggy back : 100 ml bag",
+            "potassium chloride 20 meq in 50 ml ivpb **locked dose",
+            "potassium chloride 20 meq in",
+            "potassium chloride  20 meq oral sr part/tab",
+            "plavix",
+            "piperacillin-tazobactam",
+            "phenylephrine 10 mg/250 ml ns",
+            "percocet 5/325 tab",
+            "pepcid",
+            "pantoprazole",
+            "ondansetron hcl (pf) 4 mg/2 ml inj soln",
+            "normodyne;trandate",
+            "norepinephrine 4 mg/250 ml ns",
+            "nitrostat",
+            "nitroglycerin 0.4 mg sl subl",
+            "nacl 0.9% mbp",
+            "morphine 4 mg/1 ml 1 ml syr",
+            "morphine 2 mg/1 ml 1 ml syr",
+            "morphine 10 mg/ml injection : 1 ml injection",
+            "morphine",
+            "midazolam hcl",
+            "metoprolol tartrate 25 mg tablet",
+            "metoprolol tartrate 25 mg po tabs",
+            "methylprednisolone sodium succ 40 mg ij solr",
+            "methylprednisolone 125 mg inj",
+            "magnesium sulfate ivpb",
+            "magnesium sulfate in d5w 1 gram/100 ml iv piggy back : 100 ml",
+            "magnesium oxide 400 mg oral tab",
+            "lorazepam 2 mg/1 ml 1 ml inj",
+            "lorazepam 0.5 mg tab",
+            "lopressor",
+            "lidocaine hcl 1%",
+            "levothyroxine",
+            "levofloxacin in d5w 500 mg/100ml iv soln",
+            "levetiracetam 500 mg/5ml iv soln",
+            "levaquin",
+            "klor-con,k-tab",
+            "klonopin",
+            "kcl 20 meq/50 ml",
+            "isosorbide mononitrate er 30 mg po tb24",
+            "ipratropium-albuterol 0.5-2.5 (3) mg/3ml in soln",
+            "iopamidol",
+            "insulin aspart 100 unit/ml sc soln",
+            "imdur",
+            "ibuprofen",
+            "hydromorphone",
+            "hydrocortisone  (pf) 100 mg inj",
+            "hydrochlorothiazide 25 mg po tabs",
+            "hydralazine hcl",
+            "heparin inj 5,000 units",
+            "heparin 5000 unit/ml 1ml inj",
+            "heparin 5,000 unit/ml",
+            "heparin (porcine)",
+            "glucose-vitamin c 4-0.006 g po chew",
+            "glucose 40% gel",
+            "glucagon 1 mg (1 unit) inj",
+            "glucagon",
+            "furosemide 10mg/ml sso",
+            "furosemide",
+            "fentanyl citrate (pf)",
+            "fentanyl (pf) 50 mcg/1 ml 2 ml inj",
+            "famotidine 20 mg tab",
+            "famotidine 20 mg po tabs",
+            "famotidine (pepcid) tablet 20 mg",
+            "dulcolax laxative",
+            "docusate sodium (colace) oral liquid 100 mg",
+            "dilaudid",
+            "diazepam",
+            "dextrose 50% 25 gram/50 ml syr",
+            "dextrose 50%",
+            "clopidogrel bisulfate 75 mg po tabs",
+            "clonazepam 0.5 mg po tabs",
+            "ceftriaxone in d5w (rocephin) ivpb 1 g",
+            "calcium gluconate 100 mg/ml iv soln",
+            "calcium chloride",
+            "buminate",
+            "bumex",
+            "bisacodyl 10 mg rect supp",
+            "bisacodyl",
+            "atorvastatin calcium 20 mg po tabs",
+            "ativan",
+            "ambien",
+            "albumin human 5 % iv soln",
+            "albumin 25% 100 ml inj",
+            "acetaminophen 650mg rect supp",
+            "acetaminophen 325 mg po tabs",
+            "500 ml  -  sodium chloride 0.9 % iv soln",
+            "50 ml syringe: dextrose 50 % iv soln",
+            "50 ml syringe : dextrose 50 % iv soln",
+            "50 ml  -  albumin human 25 % iv soln",
+            "4 ml syringe : labetalol hcl 5 mg/ml iv soln",
+            "2 ml vial : ondansetron hcl 4 mg/2ml ij soln",
+            "100 ml  -  potassium chloride 20 meq/100ml iv soln",
+            "100 ml  -  magnesium sulfate in d5w 10-5 mg/ml-% iv soln",
+            "10 ml  -  nicardipine hcl 2.5 mg/ml iv soln",
+            "1 ml vial: heparin sodium (porcine) 5000 unit/ml ij soln",
+            "1 ml vial: diphenhydramine hcl 50 mg/ml ij soln",
+            "1 ml vial : lorazepam 2 mg/ml ij soln",
+            "1 ml vial : hydralazine hcl 20 mg/ml ij soln",
+            "1 ml vial : heparin sodium (porcine) 1000 unit/ml ij soln",
+            "1 ml : promethazine 25 mg/ml inj soln",
+            "1 ml  : hydromorphone hcl pf 2 mg/ml ij soln",
+            "1 ml  -  lorazepam 2 mg/ml ij soln",
+            "1 ml  -  hydromorphone hcl 1 mg/ml ij soln",
+            "1 ml  -  heparin sodium (porcine) 5000 unit/ml ij soln",
+            "1 each vial : alteplase 2 mg ij solr"
+        ]
+    }
+]
