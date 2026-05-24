@@ -18,6 +18,9 @@ dependencies:
   - pip:
       - pyautogen==0.2.0
       - openai==1.7.2
+      # httpx>=0.28 removed the `proxies` kwarg that openai 1.7.2 still passes,
+      # which crashes client construction with "unexpected keyword argument 'proxies'".
+      - "httpx<0.28"
       - "numpy<2.0"
       - sentence-transformers
       - scikit-learn
