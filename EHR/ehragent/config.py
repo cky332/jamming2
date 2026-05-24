@@ -1,5 +1,15 @@
+import os
+
+
 def openai_config(model):
-    if model == 'gpt-4':
+    if model.startswith("Pro/deepseek-ai/") or model.startswith("deepseek-ai/"):
+        # DeepSeek-V3.2 经 SiliconFlow OpenAI 兼容接口；key 只从环境变量读取
+        config = {
+            "model": model,
+            "api_key": os.getenv("SILICONFLOW_API_KEY"),
+            "base_url": "https://api.siliconflow.cn/v1",
+        }
+    elif model == 'gpt-4':
         config = {
             "model": "gpt-4",
             "api_key": "your-key"
@@ -13,7 +23,7 @@ def openai_config(model):
         config = {
             "model": "o1-preview",
             "api_key": "your-key"
-        }     
+        }
     return config
 
 def llm_config_list(seed, config_list):

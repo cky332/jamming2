@@ -88,9 +88,10 @@ class MedAgent(UserProxyAgent):
 
         messages = [{"role": "system", "content": "You are an AI assistant that helps people find information."},
                     {"role": "user", "content": query_message}]
-        client = OpenAI(
-            api_key=config["api_key"],
-        )
+        client_kwargs = {"api_key": config["api_key"]}
+        if config.get("base_url"):
+            client_kwargs["base_url"] = config["base_url"]
+        client = OpenAI(**client_kwargs)
 
         while patience > 0:
             patience -= 1
