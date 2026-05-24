@@ -285,6 +285,22 @@ class MedAgent(UserProxyAgent):
             "content": str(content),
         }
     
+    def execute_code_blocks(self, code_blocks):
+        # Models that don't use OpenAI function-calling (e.g. DeepSeek via
+        # SiliconFlow) emit fenced ```python blocks instead of calling the
+        # registered `python` function. Route that code through run_code, which
+        # prepends CodeHeader so the EHR tools (LoadDB/FilterDB/GetValue/
+        # SQLInterpreter/Calendar) are in scope. Otherwise autogen's bare
+        # executor runs it without the tools and raises NameError.
+        from toolset_high import run_code
+        logs_all = ""
+        for lang, code in code_blocks:
+            if not code or not code.strip():
+                continue
+            self.code = code
+            logs_all += "\n" + str(run_code(code))
+        return 0, logs_all
+
     def update_memory(self, num_shots, memory):
         self.num_shots = num_shots
         self.memory = memory

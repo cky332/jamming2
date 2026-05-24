@@ -109,7 +109,7 @@ def main():
 
     chatbot = autogen.agentchat.AssistantAgent(
         name="chatbot",
-        system_message="For coding tasks, only use the functions you have been provided with. Reply TERMINATE when the task is done. Save the answers to the questions in the variable 'answer'. Please only generate the code.",
+        system_message="For coding tasks, only use the functions you have been provided with (LoadDB, FilterDB, GetValue, SQLInterpreter, Calendar, Calculate). Always wrap your Python code in a single ```python ... ``` block. Save the answer to the question in the variable 'answer'. Reply TERMINATE when the task is done.",
         llm_config=llm_config,
     )
 
