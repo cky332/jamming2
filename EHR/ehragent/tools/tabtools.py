@@ -1,10 +1,17 @@
 import pandas as pd
 import jsonlines
 import json
+import os
 import re
 import sqlite3
 import sys
 import Levenshtein
+
+# Anchor the relative data paths to this file's location so the tools work
+# regardless of the process CWD (run_code may be invoked from anywhere).
+_DATA_DIR = os.path.dirname(os.path.abspath(__file__))
+_DB_PATH = os.path.join(_DATA_DIR, "../ehrsql-ehragent/mimic_iii/mimic_iii.db")
+
 def db_loader(target_ehr):
     ehr_dict = {"admissions":"../ehrsql-ehragent/mimic_iii/ADMISSIONS.csv",
                 "chartevents":"../ehrsql-ehragent/mimic_iii/CHARTEVENTS.csv",
@@ -24,7 +31,7 @@ def db_loader(target_ehr):
                 "procedures_icd":"../ehrsql-ehragent/mimic_iii/PROCEDURES_ICD.csv",
                 "transfers":"../ehrsql-ehragent/mimic_iii/TRANSFERS.csv",
                 }
-    data = pd.read_csv(ehr_dict[target_ehr])
+    data = pd.read_csv(os.path.join(_DATA_DIR, ehr_dict[target_ehr]))
     # data = data.astype(str)
     column_names = ', '.join(data.columns.tolist())
     return data
@@ -190,14 +197,14 @@ def get_value(data, argument):
         raise Exception("The column name {} is incorrect. Please check the column name and make necessary changes. The columns in this table include {}.".format(column, column_values))
 
 def sql_interpreter(command):
-    con = sqlite3.connect("../ehrsql-ehragent/mimic_iii/mimic_iii.db")
+    con = sqlite3.connect(_DB_PATH)
     cur = con.cursor()
     results = cur.execute(command).fetchall()
     return results
 
 def date_calculator(argument):
     try:
-        con = sqlite3.connect("../ehrsql-ehragent/mimic_iii/mimic_iii.db")
+        con = sqlite3.connect(_DB_PATH)
         cur = con.cursor()
         command = "select datetime(current_time, '{}')".format(argument)
         results = cur.execute(command).fetchall()[0][0]
