@@ -1,0 +1,29 @@
+# Conda environment for the MINJA EHR refusal-attack experiments.
+#   conda env create -f EHR/environment.yml
+#   conda activate minja-ehr
+#
+# Why this file (not just requirements.txt):
+#  - requirements.txt is missing sentence-transformers / scikit-learn / tiktoken,
+#    which medagent.py imports -> a bare `pip install -r requirements.txt` crashes.
+#  - requirements.txt also lists `autogen==1.0.16`, an unrelated package that
+#    clobbers the `autogen` module provided by pyautogen. Only pyautogen is used.
+#  - numpy is pinned <2 because the torch / sentence-transformers / sklearn stack
+#    here still expects the numpy 1.x ABI.
+name: minja-ehr
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - pyautogen==0.2.0
+      - openai==1.7.2
+      - "numpy<2.0"
+      - sentence-transformers
+      - scikit-learn
+      - tiktoken
+      - pandas
+      - termcolor
+      - python-Levenshtein
+      - jsonlines
+      - wolframalpha
