@@ -10,27 +10,59 @@ import Levenshtein
 # Anchor the relative data paths to this file's location so the tools work
 # regardless of the process CWD (run_code may be invoked from anywhere).
 _DATA_DIR = os.path.dirname(os.path.abspath(__file__))
-_DB_PATH = os.path.join(_DATA_DIR, "../ehrsql-ehragent/mimic_iii/mimic_iii.db")
+
+# Which dataset the tools currently operate on. The dataset-specific CodeHeader
+# (prompts_mimic / prompts_eicu) calls set_dataset() so LoadDB / SQLInterpreter
+# resolve to the right tables and SQLite DB.
+_DATASET = "mimic_iii"
+
+_DB_PATHS = {
+    "mimic_iii": os.path.join(_DATA_DIR, "../ehrsql-ehragent/mimic_iii/mimic_iii.db"),
+    "eicu": os.path.join(_DATA_DIR, "../ehrsql-ehragent/eicu/eicu.db"),
+}
+
+_EHR_DICTS = {
+    "mimic_iii": {
+        "admissions": "../ehrsql-ehragent/mimic_iii/ADMISSIONS.csv",
+        "chartevents": "../ehrsql-ehragent/mimic_iii/CHARTEVENTS.csv",
+        "cost": "../ehrsql-ehragent/mimic_iii/COST.csv",
+        "d_icd_diagnoses": "../ehrsql-ehragent/mimic_iii/D_ICD_DIAGNOSES.csv",
+        "d_icd_procedures": "../ehrsql-ehragent/mimic_iii/D_ICD_PROCEDURES.csv",
+        "d_items": "../ehrsql-ehragent/mimic_iii/D_ITEMS.csv",
+        "d_labitems": "../ehrsql-ehragent/mimic_iii/D_LABITEMS.csv",
+        "diagnoses_icd": "../ehrsql-ehragent/mimic_iii/DIAGNOSES_ICD.csv",
+        "icustays": "../ehrsql-ehragent/mimic_iii/ICUSTAYS.csv",
+        "inputevents_cv": "../ehrsql-ehragent/mimic_iii/INPUTEVENTS_CV.csv",
+        "labevents": "../ehrsql-ehragent/mimic_iii/LABEVENTS.csv",
+        "microbiologyevents": "../ehrsql-ehragent/mimic_iii/MICROBIOLOGYEVENTS.csv",
+        "outputevents": "../ehrsql-ehragent/mimic_iii/OUTPUTEVENTS.csv",
+        "patients": "../ehrsql-ehragent/mimic_iii/PATIENTS.csv",
+        "prescriptions": "../ehrsql-ehragent/mimic_iii/PRESCRIPTIONS.csv",
+        "procedures_icd": "../ehrsql-ehragent/mimic_iii/PROCEDURES_ICD.csv",
+        "transfers": "../ehrsql-ehragent/mimic_iii/TRANSFERS.csv",
+    },
+    "eicu": {
+        "allergy": "../ehrsql-ehragent/eicu/allergy.csv",
+        "cost": "../ehrsql-ehragent/eicu/cost.csv",
+        "diagnosis": "../ehrsql-ehragent/eicu/diagnosis.csv",
+        "intakeoutput": "../ehrsql-ehragent/eicu/intakeoutput.csv",
+        "lab": "../ehrsql-ehragent/eicu/lab.csv",
+        "medication": "../ehrsql-ehragent/eicu/medication.csv",
+        "microlab": "../ehrsql-ehragent/eicu/microlab.csv",
+        "patient": "../ehrsql-ehragent/eicu/patient.csv",
+        "treatment": "../ehrsql-ehragent/eicu/treatment.csv",
+        "vitalperiodic": "../ehrsql-ehragent/eicu/vitalperiodic.csv",
+    },
+}
+
+
+def set_dataset(name):
+    global _DATASET
+    _DATASET = name
+
 
 def db_loader(target_ehr):
-    ehr_dict = {"admissions":"../ehrsql-ehragent/mimic_iii/ADMISSIONS.csv",
-                "chartevents":"../ehrsql-ehragent/mimic_iii/CHARTEVENTS.csv",
-                "cost":"../ehrsql-ehragent/mimic_iii/COST.csv",
-                "d_icd_diagnoses":"../ehrsql-ehragent/mimic_iii/D_ICD_DIAGNOSES.csv",
-                "d_icd_procedures":"../ehrsql-ehragent/mimic_iii/D_ICD_PROCEDURES.csv",
-                "d_items":"../ehrsql-ehragent/mimic_iii/D_ITEMS.csv",
-                "d_labitems":"../ehrsql-ehragent/mimic_iii/D_LABITEMS.csv",
-                "diagnoses_icd":"../ehrsql-ehragent/mimic_iii/DIAGNOSES_ICD.csv",
-                "icustays":"../ehrsql-ehragent/mimic_iii/ICUSTAYS.csv",
-                "inputevents_cv":"../ehrsql-ehragent/mimic_iii/INPUTEVENTS_CV.csv",
-                "labevents":"../ehrsql-ehragent/mimic_iii/LABEVENTS.csv",
-                "microbiologyevents":"../ehrsql-ehragent/mimic_iii/MICROBIOLOGYEVENTS.csv",
-                "outputevents":"../mimic_iii/OUTPUTEVENTS.csv",
-                "patients":"../ehrsql-ehragent/mimic_iii/PATIENTS.csv",
-                "prescriptions":"../ehrsql-ehragent/mimic_iii/PRESCRIPTIONS.csv",
-                "procedures_icd":"../ehrsql-ehragent/mimic_iii/PROCEDURES_ICD.csv",
-                "transfers":"../ehrsql-ehragent/mimic_iii/TRANSFERS.csv",
-                }
+    ehr_dict = _EHR_DICTS[_DATASET]
     data = pd.read_csv(os.path.join(_DATA_DIR, ehr_dict[target_ehr]))
     # data = data.astype(str)
     column_names = ', '.join(data.columns.tolist())
@@ -197,14 +229,14 @@ def get_value(data, argument):
         raise Exception("The column name {} is incorrect. Please check the column name and make necessary changes. The columns in this table include {}.".format(column, column_values))
 
 def sql_interpreter(command):
-    con = sqlite3.connect(_DB_PATH)
+    con = sqlite3.connect(_DB_PATHS[_DATASET])
     cur = con.cursor()
     results = cur.execute(command).fetchall()
     return results
 
 def date_calculator(argument):
     try:
-        con = sqlite3.connect(_DB_PATH)
+        con = sqlite3.connect(_DB_PATHS[_DATASET])
         cur = con.cursor()
         command = "select datetime(current_time, '{}')".format(argument)
         results = cur.execute(command).fetchall()[0][0]

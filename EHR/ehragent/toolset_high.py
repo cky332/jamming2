@@ -7,12 +7,15 @@ from config import openai_config
 from openai import AzureOpenAI
 import traceback
 
-def run_code(cell):
+def run_code(cell, dataset="mimic_iii"):
     """
     Returns the path to the python interpreter.
     """
-    # import prompts
-    from prompts_mimic import CodeHeader
+    # import the dataset-specific CodeHeader (it wires the tools + selects the DB)
+    if dataset == "mimic_iii":
+        from prompts_mimic import CodeHeader
+    else:
+        from prompts_eicu import CodeHeader
     try:
         global_var = {"answer": 0}
         exec(CodeHeader+cell, global_var)
