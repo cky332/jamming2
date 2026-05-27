@@ -293,12 +293,13 @@ class MedAgent(UserProxyAgent):
         # SQLInterpreter/Calendar) are in scope. Otherwise autogen's bare
         # executor runs it without the tools and raises NameError.
         from toolset_high import run_code
+        dataset = getattr(self, "dataset", "mimic_iii")
         logs_all = ""
         for lang, code in code_blocks:
             if not code or not code.strip():
                 continue
             self.code = code
-            logs_all += "\n" + str(run_code(code))
+            logs_all += "\n" + str(run_code(code, dataset))
         return 0, logs_all
 
     def update_memory(self, num_shots, memory):

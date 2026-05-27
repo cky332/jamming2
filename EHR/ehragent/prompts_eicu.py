@@ -1,4 +1,5 @@
 CodeHeader = """from tools import tabtools, calculator
+tabtools.set_dataset('eicu')
 Calculate = calculator.WolframAlphaCalculator
 LoadDB = tabtools.db_loader
 FilterDB = tabtools.data_filter
