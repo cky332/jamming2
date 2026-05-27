@@ -16,6 +16,10 @@ def run_code(cell, dataset="mimic_iii"):
         from prompts_mimic import CodeHeader
     else:
         from prompts_eicu import CodeHeader
+    # Models sometimes emit a bare TERMINATE inside the code block (the eICU
+    # few-shot examples write it right after the code); strip it so exec doesn't
+    # raise NameError.
+    cell = "\n".join(l for l in cell.split("\n") if l.strip() != "TERMINATE")
     try:
         global_var = {"answer": 0}
         exec(CodeHeader+cell, global_var)
